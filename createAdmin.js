@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const Admin = require("./model/Admin");
-const connectDB = require("./db"); // tumhara new db.js
+const connectDB = require("./db"); // tumhara db.js
 require("dotenv").config();
 
 async function createAdmin() {
@@ -14,12 +13,10 @@ async function createAdmin() {
       return mongoose.disconnect();
     }
 
-    const hashedPassword = await bcrypt.hash("Admin2580@", 10);
-
     const admin = new Admin({
       name: "Admin",
       email: "shopease123@gmail.com",
-      password: hashedPassword,
+      password: "Admin2580@", // plain text password
     });
 
     await admin.save();
