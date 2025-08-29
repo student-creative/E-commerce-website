@@ -1,9 +1,11 @@
 // seederCategory.js (CommonJS)
+require('dotenv').config(); //
 const connectDB = require("./db"); // CommonJS style
 const Category = require("./model/Category");
 const { categories } = require("./model/categoryData");
 
 const seedCategories = async () => {
+  
   await connectDB(); // connect to MongoDB
 
   try {

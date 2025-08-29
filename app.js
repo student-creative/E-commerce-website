@@ -20,7 +20,7 @@ var app = express();
 
 
 app.use(cors({
-    origin: 'http://localhost:3000', // React app ka origin
+    origin: 'https://ecommrcesitee.netlify.app', // Netlify deployed frontend
     methods: 'GET,POST,PUT,DELETE',
     credentials: true
 }));
