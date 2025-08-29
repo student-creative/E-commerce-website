@@ -3,9 +3,9 @@ const router = express.Router();
 const product = require("../controller/productController");
 
 const { upload } = require("../middleware/fileMiddleware");
-
+const auth = require('../auth/adminAuth')
 // Admin route
-router.post("/admin", upload.single("image"), product.addProduct);
+router.post("/admin", auth, upload.single("image"), product.addProduct);
 
 // All products
 router.get("/api", product.getProducts);
