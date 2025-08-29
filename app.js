@@ -22,7 +22,7 @@ var app = express();
 
 
 app.use(cors({
-    origin: 'https://ecommrcesitee.netlify.app', // Netlify deployed frontend
+    origin: 'https://ecommrcesite.netlify.app', // Netlify deployed frontend
     methods: 'GET,POST,PUT,DELETE',
     credentials: true
 }));
