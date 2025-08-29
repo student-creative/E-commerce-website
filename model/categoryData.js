@@ -2,7 +2,7 @@
 export const categories = [
   {
     name: "Electronics",
-    description: "All electronic gadgets and devices",
+    description: "All electronic gadgets and devicess",
     image: "https://e-commerce-website-tpxn.onrender.com/img/electric1.jpg",
     products: [
       { id: 1, title: "Smartphone A", description: "6.5 inch OLED, 128GB storage", price: 29999, image: "https://e-commerce-website-tpxn.onrender.com/img/img1.jpg" },
