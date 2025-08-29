@@ -8,13 +8,15 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log(err));
 
 async function createAdmin() {
-  const hashedPassword = await bcrypt.hash("Admin2580@", 10);
+
   
-  const admin = new Admin({
-    name: "Admin",
-    email: "shopease123@gmail.com",
-    password: hashedPassword
-  });
+const admin = new Admin({
+  name: "Admin",
+  email: "shopease123@gmail.com",
+  password: "Admin2580@"  // Plain text
+});
+await admin.save();
+
 
   await admin.save();
   console.log("Admin created successfully!");
